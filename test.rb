@@ -55,6 +55,21 @@ def get_elements_until_greater_than_five(array)
   array.take_while { |number| number < 6 }
 end
 
+def get_all_letters_in_array_of_words(array)
+	a = array.join
+	b = a.split('')
+	c = b.sort_by { |letter| letter}
+end
+
+def add_together_keys_and_values(hash)
+  array = hash.map { |k,v|  k + v }
+  array.reduce(:+)
+end
 
 
-puts convert_array_to_a_hash ['a', 'b', 'c', 'd']
+
+def format_date_nicely(date)
+	date.strftime("%Y/%m/%d")
+end
+
+p format_date_nicely(Time.new(2013, 10, 31))
